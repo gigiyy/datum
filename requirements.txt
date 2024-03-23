@@ -10,14 +10,11 @@ filelock==3.9.0
 fonttools==4.38.0
 hypothesis==6.67.1
 idna==3.4
-intel-openmp==2023.0.0
 Jinja2==3.1.2
 joblib==1.2.0
 kiwisolver==1.4.4
 MarkupSafe==2.1.2
 matplotlib==3.6.3
-mkl==2023.0.0
-mkl-include==2023.0.0
 mpmath==1.2.1
 networkx==3.0
 numpy==1.24.2
@@ -35,12 +32,10 @@ scipy==1.10.0
 six==1.16.0
 sortedcontainers==2.4.0
 sympy==1.11.1
-tbb==2021.8.0
 threadpoolctl==3.1.0
 torch==1.13.1
 torchaudio==0.13.1
 torchvision==0.14.1
 tqdm==4.64.1
 types-dataclasses==0.6.6
-typing_extensions==4.4.0
 urllib3==1.26.14

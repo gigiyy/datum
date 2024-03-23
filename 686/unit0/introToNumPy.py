@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def randomization(n):
     """
     Arg:`
@@ -7,7 +8,7 @@ def randomization(n):
     Returns:
       A - a randomly-generated nx1 Numpy array.
     """
-    #Your code here
+    # Your code here
     return np.random.random([n, 1])
 
 
@@ -24,10 +25,11 @@ def operations(h, w):
       B - a randomly-generated h x w Numpy array.
       s - the sum of A and B.
     """
-    #Your code here
+    # Your code here
     a = np.random.random([h, w])
     b = np.random.random(([h, w]))
     return a, b, a + b
+
 
 def norm(A, B):
     """
@@ -40,8 +42,9 @@ def norm(A, B):
     Returns:
       s - the L2 norm of A+B.
     """
-    #Your code here
+    # Your code here
     return np.linalg.norm(A + B)
+
 
 x = randomization(3)
 print(x)
