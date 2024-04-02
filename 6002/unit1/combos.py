@@ -32,10 +32,12 @@ def yieldAllCombos(items):
                 combo2.append(items[j])
         yield (combo1, combo2)
         
+if __name__ == "__main__":
+    items = ['apple', 'orange', 'peach', 'banana']
+    print("power set:")
+    for combo in powerSet(items):
+        print(combo)
 
-items = ['apple', 'orange', 'peach', 'banana']
-# for combo in powerSet(items):
-#     print(combo)
-
-for combo in yieldAllCombos(items):
-    print(combo)
+    print ("yield all combos:")
+    for combo in yieldAllCombos(items):
+        print(combo)
