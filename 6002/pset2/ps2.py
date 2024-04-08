@@ -15,7 +15,7 @@ import pylab
 # If you get a "Bad magic number" ImportError, you are not using Python 3.5 
 
 # For Python 3.6:
-from ps2_verify_movement310 import testRobotMovement
+from ps2_verify_movement312 import testRobotMovement
 # If you get a "Bad magic number" ImportError, you are not using Python 3.6
 
 
@@ -297,18 +297,18 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
         return float(room.getNumCleanedTiles()) / room.getNumTiles()
     
     def trial():
-        # anim = ps2_visualize.RobotVisualization(num_robots, width, height)
+        anim = ps2_visualize.RobotVisualization(num_robots, width, height, 0.01)
         room = RectangularRoom(width, height)
         robots = [robot_type(room, speed) for _ in range(num_robots)]
         coverage = cleaned(room)
         ticks = 0
         while (coverage < min_coverage):
-            # anim.update(room, robots)
             ticks += 1
             for robot in robots:
                 robot.updatePositionAndClean()
             coverage = cleaned(room)
-        # anim.done()
+            anim.update(room, robots)
+        anim.done()
         return ticks
     
     allTicks = []

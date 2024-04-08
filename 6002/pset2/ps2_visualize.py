@@ -22,7 +22,7 @@ class RobotVisualization:
         self.master = Tk()
         self.w = Canvas(self.master, width=500, height=500)
         self.w.pack()
-        #self.master.update()
+        self.master.update()
 
         # Draw a backing and lines
         x1, y1 = self._map_coords(0, 0)
@@ -36,7 +36,7 @@ class RobotVisualization:
                 x1, y1 = self._map_coords(i, j)
                 x2, y2 = self._map_coords(i + 1, j + 1)
                 self.tiles[(i, j)] = self.w.create_rectangle(x1, y1, x2, y2,
-                                                             fill = "green")
+                                                             fill = "gray")
 
         # Draw gridlines
         for i in range(width + 1):
@@ -98,7 +98,7 @@ class RobotVisualization:
             x1, y1 = self._map_coords(x - 0.08, y - 0.08)
             x2, y2 = self._map_coords(x + 0.08, y + 0.08)
             self.robots.append(self.w.create_oval(x1, y1, x2, y2,
-                                                  fill = "cyan"))
+                                                  fill = "black"))
             self.robots.append(
                 self._draw_robot(robot.getRobotPosition(), robot.getRobotDirection()))
         # Update text
