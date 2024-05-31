@@ -14,3 +14,4 @@ use `.python-version` to set version number for current project
 ## courses
 - 6001: Introduction to Computer Science Using Python
 - 6002: Introduction to Computational Thinking and Data Science
+- 686:  Machine Learning with Python
